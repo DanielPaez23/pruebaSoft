@@ -19,10 +19,24 @@
                 <input type="password" name="clave" id="clave" class="form-control">
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Aceptar</button>
+                <button type="submit" class="btn btn-primary" onclick="verificar()">Aceptar</button>
             </div>
             
         </form>
     </div>
+    <script>
+        const user = "Dan23"
+        const pw = 12345
+        function verificar(){
+            let usuario= document.getElementById("usuario").value
+            let clave= document.getElementById("clave").value
+            if(usuario==user && clave==pw){
+                alert("Login exitoso")
+            }else{
+                alert("Revisar los datos ingresados")
+            }
+        }
+
+    </script>
 </body>
 </html>
